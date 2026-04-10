@@ -32,9 +32,14 @@ This project is built for portfolio purposes to demonstrate real-world admin das
 
 ## ⚙️ Setup Instructions
 
+### 🔹 Frontend Setup
+
 ```bash
 # Clone repository
 git clone https://github.com/your-username/neurocelix-admin-dashboard.git
+
+# Go to frontend folder
+cd frontend
 
 # Install dependencies
 npm install
@@ -43,20 +48,23 @@ npm install
 npm run dev
 ```
 
+### 🔹 Backend Setup
+
+```bash
+# Go to backend folder
+cd backend
+
+# Install dependencies
+npm install
+
+# Create .env file
+cp .env.example .env
+```
+
 ---
 
 ## 📷 Preview
 
 *Add screenshots or demo link here*
 
----
 
-## 📄 License
-
-This project is for educational and portfolio purposes.
-
----
-
-## 👨‍💻 Author
-
-Neurocelix Developer
