@@ -3,7 +3,7 @@
 ## 🎥 Project Demo
 
 ▶️ Watch Demo:  
-👉 Add your demo video link here
+👉 https://neuroclix.onrender.com/
 
 ---
 
@@ -89,6 +89,14 @@ Neurocelix-Admin-Dashboard/
 - Connected frontend with backend REST APIs
 - Built reusable and scalable components
 
+> Backend development was handled by a team member.
+
+---
+
+## 🤝 Team Work
+- **Frontend:** Developed by Me  
+- **Backend:** Developed by Team Member  
+
 ---
 
 ## 📌 Project Purpose
@@ -114,6 +122,7 @@ Follow the steps below to run the project locally.
 ```bash
 git clone https://github.com/RukhsarYaqoob/Neurocelix-Admin-Dashboard.git
 cd Neurocelix-Admin-Dashboard
+```
 
 ---
 
