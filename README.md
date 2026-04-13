@@ -80,6 +80,15 @@ Neurocelix-Admin-Dashboard/
 
 ---
 
+## 🚀 Key Highlights
+
+* **State Orchestration:** Using **Redux Toolkit** for complex data flows and **Context API** for lightweight auth states.
+* **Responsive Architecture:** Fully fluid UI built with **Tailwind CSS**, optimized for all screen sizes.
+* **Secure Routing:** Implementation of Higher-Order Components (HOCs) to protect private admin routes.
+* **Performance:** Optimized API calls using **Axios** interceptors for token management.
+
+---
+
 ## 🧑‍💻 My Contribution
 
 - Developed complete **Admin Dashboard Frontend**
