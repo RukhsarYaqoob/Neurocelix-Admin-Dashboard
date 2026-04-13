@@ -1,70 +1,155 @@
-# Neurocelix Admin Dashboard
+# 🚀 Neurocelix Admin Dashboard
 
-A modern React-based admin dashboard built as a portfolio project to manage multiple website modules through a centralized interface.
+## 🎥 Project Demo
 
----
-
-## 🚀 Features
-
-* Secure Authentication using **Context API**
-* Global State Management with **Redux Toolkit (RTK)**
-* Full **CRUD Operations** integrated with REST APIs
-* Responsive and modern UI using **Tailwind CSS**
-* Modular architecture for scalable development
+▶️ Watch Demo:  
+👉 Add your demo video link here
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 Overview
 
-* React.js
-* Context API
-* Redux Toolkit (RTK)
-* REST APIs
-* Tailwind CSS
+Neurocelix Admin Dashboard is a modern web-based administrative panel designed to manage multiple website modules through a centralized interface. It provides secure authentication, scalable architecture, and efficient data management using REST APIs and global state management.
+
+This project demonstrates real-world admin dashboard development including authentication flow, CRUD operations, API integration, and responsive UI design.
+
+---
+
+## 📂 Project Structure
+
+```bash
+Neurocelix-Admin-Dashboard/
+│
+├── frontend/        # React Application
+│
+└── backend/         # Node.js & Express API
+```
+
+
+---
+
+## 🧑‍💻 Tech Stack
+
+### 🎨 Frontend
+- React.js
+- Tailwind CSS
+- React Router DOM
+- Context API
+- Redux Toolkit (RTK)
+- Axios
+
+### ⚙️ Backend
+- Node.js
+- Express.js
+- REST APIs
+- MongoDB (Optional / API Based)
+
+### 🔐 Authentication & Security
+- Context API Authentication
+- Token-Based Authentication
+- Protected Routes
+- Secure API Integration
+
+---
+
+## ✨ Features
+
+### 🛠️ Admin Panel
+- Secure admin authentication
+- Modern dashboard interface
+- Responsive layout (Desktop & Mobile)
+- Sidebar navigation system
+- Protected admin routes
+
+---
+
+### 📦 Module Management
+- Full CRUD Operations
+- REST API Integration
+- Dynamic data handling
+- Reusable components architecture
+- Scalable project structure
+
+---
+
+### ⚡ State Management
+- Redux Toolkit global state management
+- Context API authentication handling
+- Optimized data flow
+- Clean modular architecture
+
+---
+
+## 🧑‍💻 My Contribution
+
+- Developed complete **Admin Dashboard Frontend**
+- Implemented Authentication using Context API
+- Integrated Redux Toolkit for global state management
+- Designed responsive UI using Tailwind CSS
+- Connected frontend with backend REST APIs
+- Built reusable and scalable components
 
 ---
 
 ## 📌 Project Purpose
 
-This project is built for portfolio purposes to demonstrate real-world admin dashboard development, including authentication flow, state management, and API integration.
+This project is built for **portfolio purposes** to demonstrate:
+
+- Admin Dashboard Development
+- Authentication System Design
+- State Management Architecture
+- API Integration
+- Real-world scalable frontend structure
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Installation & Setup
 
-### 🔹 Frontend Setup
+Follow the steps below to run the project locally.
+
+---
+
+### 1️⃣ Clone Repository
 
 ```bash
-# Clone repository
-git clone https://github.com/your-username/neurocelix-admin-dashboard.git
+git clone https://github.com/RukhsarYaqoob/Neurocelix-Admin-Dashboard.git
+cd Neurocelix-Admin-Dashboard
 
-# Go to frontend folder
-cd frontend
+---
 
-# Install dependencies
+### 2️⃣ Setup Backend
+
+```bash
+cd backend
 npm install
+```
 
-# Start development server
+Create a **.env** file inside the backend folder:
+
+⚠️ Environment variables are not included for security reasons.
+Please create your own `.env` file using `.env.example`.
+
+Run backend server:
+
+```bash
 npm run dev
 ```
 
-### 🔹 Backend Setup
+---
+
+### 3️⃣ Setup Frontend
+
+Open a new terminal:
 
 ```bash
-# Go to backend folder
-cd backend
-
-# Install dependencies
+cd frontend
 npm install
-
-# Create .env file
-cp .env.example .env
+npm run dev
 ```
 
 ---
 
-## 📷 Preview
+## 🔐 Environment Setup
 
-*Add screenshots or demo link here*
-
-
+This project uses a demo database for portfolio purposes only.
+No sensitive or production data is stored.
