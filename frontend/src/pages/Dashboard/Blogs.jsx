@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import BlogTable from "../../components/dashboard/BlogTable";
 import { Plus } from "lucide-react";
 import { AuthContext } from "../../context/AuthContext";
@@ -37,39 +37,42 @@ const Blogs = () => {
   }, [dispatch]);
 
   // DELETE
-  const handleDelete = (id) => {
-    if (!window.confirm("Delete blog?")) return;
-    dispatch(deleteBlog(id));
-  };
+ const handleDelete = useCallback((id) => {
+  if (!window.confirm("Delete blog?")) return;
+
+  dispatch(deleteBlog(id));
+}, [dispatch]);
 
   // OPEN MODAL
-  const handleOpenModal = (blog = null) => {
-    if (blog) {
-      setEditingBlog(blog);
-      setFormData({
-        title: blog.title || "",
-        category: blog.category || "",
-        author: blog.author || "",
-        content: blog.content || "",
-        tags: blog.tags?.join(", ") || "",
-        image: blog.image || "",
-        imageFile: null,
-      });
-    } else {
-      setEditingBlog(null);
-      setFormData({
-        title: "",
-        category: "",
-        author: "",
-        content: "",
-        tags: "",
-        image: "",
-        imageFile: null,
-      });
-    }
+  const handleOpenModal = useCallback((blog = null) => {
+  if (blog) {
+    setEditingBlog(blog);
 
-    setOpenModal(true);
-  };
+    setFormData({
+      title: blog.title || "",
+      category: blog.category || "",
+      author: blog.author || "",
+      content: blog.content || "",
+      tags: blog.tags?.join(", ") || "",
+      image: blog.image || "",
+      imageFile: null,
+    });
+  } else {
+    setEditingBlog(null);
+
+    setFormData({
+      title: "",
+      category: "",
+      author: "",
+      content: "",
+      tags: "",
+      image: "",
+      imageFile: null,
+    });
+  }
+
+  setOpenModal(true);
+}, []);
 
   // SAVE BLOG
   const handleSave = () => {

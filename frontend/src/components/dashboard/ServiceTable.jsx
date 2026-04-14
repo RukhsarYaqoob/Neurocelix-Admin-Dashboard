@@ -2,11 +2,8 @@ import React, { useState, useContext } from "react";
 import { SquarePen, Trash2 } from "lucide-react";
 import { AuthContext } from "../../context/AuthContext";
 
-const ServiceTable = ({
-  services = [],
-  handleDelete,
-  handleUpdate, 
-}) => {
+const ServiceTable = React.memo(({services = [], handleDelete, handleUpdate,}) => {
+  console.log("serviceTable rendered");
   const { dark } = useContext(AuthContext);
 
   const [openModal, setOpenModal] = useState(false);
@@ -248,6 +245,6 @@ const ServiceTable = ({
       )}
     </>
   );
-};
+});
 
 export default ServiceTable;

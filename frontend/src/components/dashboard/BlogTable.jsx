@@ -3,7 +3,8 @@ import { SquarePen, Trash2 } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { updateBlog } from "../../features/blogs/blogSlice";
 
-const BlogTable = ({ blogs = [], onDelete, dark }) => {
+const BlogTable = React.memo(({ blogs = [], onDelete, dark }) => {
+  console.log("BlogTable rendered");
   const SERVER_URL = import.meta.env.VITE_SERVER_URL;
   const dispatch = useDispatch();
 
@@ -312,6 +313,6 @@ const BlogTable = ({ blogs = [], onDelete, dark }) => {
       )}
     </div>
   );
-};
+});
 
 export default BlogTable;

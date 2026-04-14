@@ -1,12 +1,8 @@
 import React from "react";
 import { SquarePen, Trash2 } from "lucide-react";
 
-const CaseStudiesTable = ({
-  caseStudies,
-  openEditModal,
-  deleteCaseStudy,
-  dark,
-}) => {
+const CaseStudiesTable = React.memo(({caseStudies,openEditModal,deleteCaseStudy,dark,}) => {
+  console.log("Child Rendered");
   return (
     <>
       {/* Desktop Table */}
@@ -167,6 +163,6 @@ const CaseStudiesTable = ({
       </div>
     </>
   );
-};
+});
 
 export default CaseStudiesTable;

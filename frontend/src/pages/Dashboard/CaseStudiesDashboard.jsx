@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useCallback } from "react";
 import { Plus } from "lucide-react";
 import CaseStudiesTable from "../../components/dashboard/CaseStudiesTable";
 import { AuthContext } from "../../context/AuthContext";
@@ -51,20 +51,20 @@ const CaseStudiesDashboard = () => {
     setOpenModal(true);
   };
 
-  const openEditModal = (study) => {
-    setEditingId(study._id);
+  const openEditModal = useCallback((study) => {
+  setEditingId(study._id);
 
-    setFormData({
-      title: study.title || "",
-      description: study.description || "",
-      client: study.client || "",
-      category: study.category || "",
-      results: study.results?.join(", ") || "",
-      tags: study.tags?.join(", ") || "",
-    });
+  setFormData({
+    title: study.title || "",
+    description: study.description || "",
+    client: study.client || "",
+    category: study.category || "",
+    results: study.results?.join(", ") || "",
+    tags: study.tags?.join(", ") || "",
+  });
 
-    setOpenModal(true);
-  };
+  setOpenModal(true);
+}, []);
 
   // SUBMIT
   const handleSubmit = (e) => {
@@ -94,10 +94,11 @@ const CaseStudiesDashboard = () => {
     setOpenModal(false);
   };
 
-  const handleDelete = (id) => {
-    if (!window.confirm("Delete this case study?")) return;
-    dispatch(deleteCaseStudy(id));
-  };
+  const handleDelete = useCallback((id) => {
+  if (!window.confirm("Delete this case study?")) return;
+
+  dispatch(deleteCaseStudy(id));
+}, [dispatch]);
 
   if (loading) {
     return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import ServiceTable from "../../components/dashboard/ServiceTable";
@@ -69,6 +69,19 @@ const Services = () => {
       dispatch(addService(payload));
     }
   };
+  const handleDelete = useCallback(
+    (id) => {
+      dispatch(deleteService(id));
+    },
+    [dispatch],
+  );
+
+  const handleUpdate = useCallback(
+    (id, data) => {
+      dispatch(updateService({ id, data }));
+    },
+    [dispatch],
+  );
 
   if (loading) {
     return (
@@ -113,8 +126,8 @@ const Services = () => {
 
       <ServiceTable
         services={services}
-        handleDelete={(id) => dispatch(deleteService(id))}
-        handleUpdate={(id, data) => dispatch(updateService({ id, data }))}
+        handleDelete={handleDelete}
+        handleUpdate={handleUpdate}
       />
 
       {/* MODAL */}
